@@ -1,13 +1,133 @@
 body {
+  background-color: radial-gradient(#eaeafe, #ddf6f3);
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.6rem;
+  text-align: center;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2261;
+}
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #808080;
+}
+.flex-container > select {
+  width: 45%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #26278d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.flex-container > input[type="text"] {
+  width: 50%;
+  padding: 0.5rem;
+  margin: 0.5rem 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #efefef;
+  text-align: center;
+}
+.currency-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.from-container > p,
+.to-container > p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2261;
+  text-align: left;
+}
+.to-container {
+  padding: 1rem 0 0 0;
+}
+.from-container {
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.footer {
+  text-align: center;
+}
+.footer > p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #808080;
+}
+.footer > .exchange-rates {
+  font-size: 0.8rem;
+  color: #000000;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+/* Media Queries */
+
+@media screen and (width <= 650px) {
+  .container {
+    padding: 1rem;
+  }
+  .currency-container {
+    padding: 1rem;
+  }
+  .footer {
+    padding: 0 1rem;
+  }
+  .footer > p {
+    font-size: 0.7rem;
+  }
+  .footer > .exchange-rates {
+    font-size: 1rem;
+  }
+  .flex-container > select {
+    width: 55%;
+  }
+  .flex-container > input[type="text"] {
+    width: 50%;
+  }
+}
+@media screen and (width <= 500px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .currency-container {
+    max-width: 270px;
+  }
+  .footer {
+    padding: 0 0.5rem;
+  }
+  .footer > p {
+    font-size: 0.8rem;
+  }
+
+  .flex-container > select {
+    width: 60%;
+  }
+  .flex-container > input[type="text"] {
+    width: 50%;
+  }
 }
